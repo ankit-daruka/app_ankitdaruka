@@ -13,6 +13,9 @@ pipeline {
         }
         stage('Test case execution') { 
             steps {
+                withSonarQubeEnv('Test_Sonar') {
+                 sh 'mvn clean package sonar:sonar'
+            }
                 echo 'Test case execution'
             }
         }
