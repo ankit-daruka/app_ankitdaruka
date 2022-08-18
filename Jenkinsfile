@@ -3,7 +3,6 @@ pipeline {
       tools {
         maven "Maven3"
         jdk "JDK 9"
-        sonarscan "SonarQubeScanner"
     }
     stages {
         stage('Build') { 
@@ -14,6 +13,7 @@ pipeline {
         }
         stage('Test case execution') { 
             steps {
+                def scannerHome = tool 'SonarQubeScanner';
                 withSonarQubeEnv('Test_Sonar') {
                  sh 'mvn clean package sonar:sonar'
             }
