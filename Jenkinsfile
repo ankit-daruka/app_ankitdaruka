@@ -3,17 +3,18 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                mvn clean install
+               sh 'mvn clean install'
+               echo 'Building' 
             }
         }
         stage('Test case execution') { 
             steps {
-                // 
+                echo 'Test case execution'
             }
         }
         stage('Kubernetes Deployment') { 
             steps {
-                // 
+                echo 'Kubernetes Deployment'
             }
         }
     }
