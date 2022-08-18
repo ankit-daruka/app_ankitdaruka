@@ -13,10 +13,12 @@ pipeline {
         }
         stage('Test case execution') { 
             steps {
+                 script {
                 def scannerHome = tool 'SonarQubeScanner';
                 withSonarQubeEnv('Test_Sonar') {
                  sh 'mvn clean package sonar:sonar'
             }
+        }
                 echo 'Test case execution'
             }
         }
