@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                mvn clean verify
+                mvn clean install
             }
         }
         stage('Test case execution') { 
