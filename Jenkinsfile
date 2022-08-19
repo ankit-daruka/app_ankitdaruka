@@ -15,6 +15,9 @@ pipeline {
             steps {
                  script {
                 def scannerHome = tool 'SonarQubeScanner';
+                tools {
+                        jdk "JDK 11" 
+                    }
                 withSonarQubeEnv('Test_Sonar') {
                  sh 'mvn clean verify sonar:sonar -Dsonar.projectKey=sonar-ankitdaruka'
             }
