@@ -19,7 +19,7 @@ pipeline {
                  script {
                 def scannerHome = tool 'SonarQubeScanner';
                 withSonarQubeEnv('Test_Sonar') {
-                 sh 'mvn clean verify sonar:sonar -Dsonar.projectKey=sonar-ankitdaruka'
+                 sh 'mvn -X clean verify sonar:sonar -Dsonar.projectKey=sonar-ankitdaruka'
             }
         }
                 echo 'Test case execution'
