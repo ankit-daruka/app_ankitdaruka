@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Test case execution') { 
              tools {
-                        jdk "JDK 11" 
+                        jdk "OpenJDK-11" 
                     }
             steps {
                  script {
