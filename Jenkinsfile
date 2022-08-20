@@ -9,6 +9,8 @@ pipeline {
             steps {
                sh 'mvn clean install'
                echo 'Building' 
+               echo JAVA_HOME
+               echo java --version
             }
         }
         stage('Test case execution') { 
