@@ -2,7 +2,7 @@ pipeline {
     agent any 
       tools {
         maven "Maven3"
-        jdk "OpenJDK-11" 
+        jdk "JDK 9"
     }
     stages {
         stage('Build') { 
@@ -12,7 +12,9 @@ pipeline {
             }
         }
         stage('Test case execution') { 
-           
+             tools {
+                        jdk "OpenJDK-11" 
+                    }
             steps {
                  script {
                 def scannerHome = tool 'SonarQubeScanner';
