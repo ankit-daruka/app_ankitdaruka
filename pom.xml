@@ -10,7 +10,7 @@
      <maven.compiler.source>9</maven.compiler.source>
      <maven.compiler.target>9</maven.compiler.target>
 	</properties>
-	<name>Devops Sample Application</name>
+	<name>app</name>
 	<url>http://maven.apache.org</url>
 	<dependencies>
 		<dependency>
@@ -209,7 +209,7 @@
 <plugin>
       <groupId>org.apache.maven.plugins</groupId>
       <artifactId>maven-compiler-plugin</artifactId>
-      <version>3.8.1</version>
+      <version>3.8.6</version>
 </plugin>
 
 </plugins>
