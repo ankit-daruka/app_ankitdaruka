@@ -8,12 +8,12 @@ pipeline {
         stage('Build') { 
             steps {
                sh 'mvn clean install'
-               echo 'Building'
+               echo 'Building' 
             }
         }
         stage('Test case execution') { 
              tools {
-                        jdk "openjdk-11" 
+                        jdk "OpenJDK-11" 
                     }
             steps {
                  script {
