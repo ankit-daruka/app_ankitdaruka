@@ -12,9 +12,7 @@ pipeline {
             }
         }
         stage('Test case execution') { 
-             tools {
-                        jdk "OpenJDK-11" 
-                    }
+            
             steps {
                  script {
                 def scannerHome = tool 'SonarQubeScanner';
